@@ -16,9 +16,8 @@ async function newUserController (request, response) {
 
 async function getUsersController(_, response) {
     try {
-        const users = await User.findAll({attributes:["username"]})
-        const userNames = users.map( user => user.username )
-        response.status(200).json( userNames )
+        const users = await User.findAll({attributes:["id","username"]})
+        response.status(200).json( users )
     } catch (error) {
         console.error(error)
         response.status(500).send()
