@@ -26,6 +26,6 @@ app.post("/messages/", authorizationMiddleware, jsonMiddleware, newMessageContro
 
 app.get("/messages/", authorizationMiddleware, getMessagesController)
 
-app.listen( 8000, ()=>{
+app.listen( process.env.PORT, ()=>{
     console.log("Express on work...");
 })
