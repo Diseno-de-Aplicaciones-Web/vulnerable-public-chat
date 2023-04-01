@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken"
-import { secret } from "../config.mjs"
 import { User } from "../db/models.mjs"
 
 async function newAuthorizationTokenController (request, response) {
@@ -11,7 +10,7 @@ async function newAuthorizationTokenController (request, response) {
             }
         })
         if ( user ) {
-            const token = jwt.sign({ userId: user.id }, secret, { expiresIn: '1h' })
+            const token = jwt.sign({ userId: user.id }, process.env.SECRET, { expiresIn: '1h' })
             response.status(200).json( { token } )
             return
         }
