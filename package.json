@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/main.mjs",
-    "dev": "nodemon ./src/main.mjs"
+    "dev": "nodemon -r ./dotenv.js ./src/main.mjs"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/DanBaDo/vulnerable-public-chat#readme",
   "devDependencies": {
     "babel-register": "^6.26.0",
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.22",
     "sequelize-cli": "^6.6.0",
     "sqlite3": "^5.1.6"
