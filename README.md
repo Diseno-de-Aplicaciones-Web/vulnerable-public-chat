@@ -8,6 +8,8 @@ En este respositorio entrontrarás un fichero que puedes importar en Insomnia. E
 
 Mirando el código del backend y la información proporcionada para Insomnia, puedes construir tu propio frontend para poder chatear en la aplicación.
 
+## Antes de empezar a escribir tu forntend
+
 Antes de empezar a programar, asegurate de que entiendes cómo funcionar el backend:
 
 * Para empezar, es necesario que crees una cuenta de usuario.
@@ -16,6 +18,8 @@ Antes de empezar a programar, asegurate de que entiendes cómo funcionar el back
 * Ese token de autorización tiene una validez de una hora. Ha de acompañar todas las peticiones al backend en el encabezado Authorization indicando un tipo bearer. Cuando el token ya no sea válido, tendrás que solicitar uno nuevo.
 
 Puedes ver cómo se aplica todo lo anterior y verlo funcionando usando la aplicación Insomnia e importanto en ella el fichero Insomnia.json.
+
+## Escribiendo el código
 
 Para empezar a escribir tu frontend, recuerda:
 * Soluciona los componentes de uno en uno. Ya te ocuparas de componer la aplicación cuando tengas todos los componentes funcionando.
@@ -27,6 +31,27 @@ Para empezar a escribir tu frontend, recuerda:
   * Permitir escribir un mensaje para y enviarlo al chat.
   * BONUS: Mostrar el nombre del usuario que envió un mensaje en base a su id.
 * No te preocupes si no puedes unificar todos los componentes para que se comporten como una aplicación. Para poder hacerlo de forma limpia y sencilla hemos de usar el hook useContext en React o los stores en Svelte.
-* Si te atascas, puedes buscar ayuda en el canal de Telegram al que puedes unirte en la página t.me/+VX5ZGOwFOgPACeMm 
+
+## Instalando el backend en local
+Es posible que te apetezca ver funcionando el backend en tu propio ordenador. Para ello tienes que seguir algunos pasos:
+* Clonar el repositorio de git.
+  ```sh
+  git clone https://github.com/Diseno-de-Aplicaciones-Web/vulnerable-public-chat.git
+  ```
+* Entrar en el repositorio e instalar las dependencias.
+  ```sh
+  npm install
+  ```
+* Proporionar las variables de entorno: haz una copia del fichero `env_template` con el nombre `.env`.
+  ```sh
+  cp env_template .env
+  ```
+* Arranca el proyecto.
+  ```sh
+  npm run dev
+  ```
+
+## Buscando ayuda
+Si te atascas, puedes buscar ayuda en el canal de Telegram al que puedes unirte en la página t.me/+VX5ZGOwFOgPACeMm 
 
 Suerte!
